@@ -1,153 +1,592 @@
-import React, { useState } from 'react';
+import React from "react";
+import Logo from '../assets/img/logo.jpeg'
 
-function Navbar() {
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
+export default function Header() {
+  const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const [flyer, setFlyer] = React.useState(false);
+  const [flyerTwo, setFlyerTwo] = React.useState(false);
 
-  const toggleDropdown = () => {
-    setDropdownOpen(!isDropdownOpen);
-  };
+  const [flyer1, setFlyer1] = React.useState(false);
+  const [flyerTwo1, setFlyerTwo1] = React.useState(false);
+
+  const [flyer2, setFlyer2] = React.useState(false);
+  const [flyerTwo2, setFlyerTwo2] = React.useState(false);
 
 
-  const handleMouseEnter = () => {
-    setDropdownOpen(true);
-  };
+  const [flyer3, setFlyer3] = React.useState(false);
+  const [flyerTwo3, setFlyerTwo3] = React.useState(false);
 
-  const handleMouseLeave = () => {
-    setDropdownOpen(false);
-  };
+  const [flyer4, setFlyer4] = React.useState(false);
+  const [flyerTwo4, setFlyerTwo4] = React.useState(false);
+
+  const [flyer5, setFlyer5] = React.useState(false);
+  const [flyerTwo5, setFlyerTwo5] = React.useState(false);
+
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="#" className="flex items-center">
-          <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="h-8 mr-3"
-            alt="Flowbite Logo"
-          />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Flowbite
-          </span>
-        </a>
-        <button
-          data-collapse-toggle="navbar-dropdown"
-          type="button"
-          onClick={toggleDropdown}
-          
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-          aria-controls="navbar-dropdown"
-          aria-expanded={isDropdownOpen}
-        >
-          <span className="sr-only">Open main menu</span>
-          <svg
-            className="w-5 h-5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 17 14"
+    <header class=" top-0 w-full clearNav z-50 bg-[#161D24] flex ">
+      <div class=" w-full flex flex-wrap p-5 flex-col md:flex-row  justify-around ">
+        <div className="flex flex-row items-center justify-between  p-3 md:p-1 ">
+          <a
+            href="/"
+            class="flex text-3xl text-white font-medium mb-4 md:mb-0"
           >
-            <path
-              stroke="currentColor"
+          <img src={Logo} alt="" className="w-14" />
+          </a>
+          <button
+            className="text-white pb-4 cursor-pointer leading-none px-3 py-1 md:hidden outline-none focus:outline-none content-end ml-auto "
+            type="button"
+            aria-label="button"
+            onClick={() => setNavbarOpen(!navbarOpen)}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="white"
+              strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth="2"
-              d="M1 1h15M1 7h15M1 13h15"
-            />
-          </svg>
-        </button>
+              className="feather feather-menu"
+            >
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
         <div
-          className={`${
-            isDropdownOpen ? 'block' : 'hidden'
-          } w-full md:block md:w-auto`}
-          id="navbar-dropdown"
+          className={
+            "md:flex   items-center justify-center ml-5 flex-col   " +
+            (navbarOpen ? " block  flex-col   p-5" : " hidden")
+          }
         >
-          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-          <li>
-              <a
-                href="#"
-                className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
-                aria-current="page"
-              >
-                Home
-              </a>
-            </li>
-            <li>
+        
+          <div class="md:ml-auto md:mr-auto font-4 pt-1 md:pl-14 pl-1 flex flex-wrap  md:text-base text-1xl md:justify-center   flex-col sm:flex-row">
+            <a class="mr-11 pr-2 text-xl cursor-pointer text-gray-300 hover:text-white font-semibold tr04">
+              Features
+            </a>
+
+
+
+            {/* first dropdown start here */}
+            <div className="relative md:mr-4">
               <button
-                id="dropdownNavbarLink"
-                data-dropdown-toggle="dropdownNavbar"
-                onClick={toggleDropdown}
-                onMouseEnter={handleMouseEnter}
-              // onMouseLeave={handleMouseLeave}
-                className="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                type="button"
+                className="
+                   group rounded-md text-gray-300 inline-flex items-center text-base font-medium focus:outline-none pb-8'
+                  "
+                onMouseEnter={() => (setFlyer(!flyer), setFlyerTwo(false))}
               >
-                Dropdown{' '}
+                <span className="tr04 text-xl">About Us</span>
                 <svg
-                  className="w-2.5 h-2.5 ml-2.5"
-                  aria-hidden="true"
+                  className={
+                    flyer === true
+                      ? "transform rotate-180 ml-3 h-5 w-5 transition ease-out duration-200"
+                      : "ml-2 h-5 w-5 text-gray-400 group-hover:text-gray-500"
+                  }
                   xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 10 6"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
                 >
                   <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="m1 1 4 4 4-4"
+                    fillRule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clipRule="evenodd"
                   />
                 </svg>
               </button>
-              {/* Dropdown menu */}
-              {isDropdownOpen && (
-                <div
-                  id="dropdownNavbar"
-                  className="absolute z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-                >
-                  <ul
-                    className="py-2 text-sm text-gray-700 dark:text-gray-400"
-                    aria-labelledby="dropdownNavbarLink"
-                  >
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Dashboard
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Settings
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Earnings
-                      </a>
-                    </li>
-                  </ul>
-                  <div className="py-1">
+              <div
+                onMouseLeave={() => setFlyer(false)}
+                className={
+                  flyer
+                    ? "opacity-100 translate-y-0 transition ease-out duration-200 absolute z-10 -ml-4 mt-3 g327  transform px-2 w-screen max-w-sm sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+                    : "hidden opacity-0 translate-y-1 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+                }
+              >
+                <div className="rounded-lg shadow-lg ring-1 ring-black  ring-opacity-5 overflow-hidden">
+                  <div className="relative grid gap-6 bg-[#161D24] px-2 py-6 sm:gap-8 ">
                     <a
-                      href="#"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                      href="/"
+                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
                     >
-                      Sign out
+                      <div className="ml-4">
+                        <p className="text-base font-medium text-white">
+                          Our Company
+                        </p>
+                      
+                      </div>
+                    </a>
+                    <a
+                      href="/"
+                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                    >
+                      <div className="ml-4">
+                        <p className="text-base font-medium text-white">
+                        Our Team
+                        
+                        </p>
+                       
+                      </div>
+                    </a>
+                    <a
+                      href="/"
+                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                    >
+                      <div className="ml-4">
+                        <p className="text-base font-medium text-white">
+                        Our Success Story
+                        </p>
+                       
+                      </div>
+                    </a>
+                    <a
+                      href="/"
+                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                    >
+                      <div className="ml-4">
+                        <p className="text-base font-medium text-white">
+                        News
+                        </p>
+                       
+                      </div>
                     </a>
                   </div>
                 </div>
-              )}
-            </li>
+              </div>
+            </div>
+            {/* first dropdown end here */}
             
-          </ul>
+            {/* second dropdown start here */}
+            <div className="relative md:mr-4">
+              <button
+                type="button"
+                className="
+                   group rounded-md text-gray-300 inline-flex items-center text-base font-medium focus:outline-none pb-8'
+                  "
+                onMouseEnter={() => (setFlyer1(!flyer), setFlyerTwo1(false))}
+              >
+                <span className="tr04 text-xl">Product</span>
+                <svg
+                  className={
+                    flyer1 === true
+                      ? "transform rotate-180 ml-3 h-5 w-5 transition ease-out duration-200"
+                      : "ml-2 h-5 w-5 text-gray-400 group-hover:text-gray-500"
+                  }
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
+              <div
+                onMouseLeave={() => setFlyer1(false)}
+                className={
+                  flyer1
+                    ? "opacity-100 translate-y-0 transition ease-out duration-200 absolute z-10 -ml-4 mt-3 g327  transform px-2 w-screen max-w-sm sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+                    : "hidden opacity-0 translate-y-1 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+                }
+              >
+                <div className="rounded-lg shadow-lg ring-1 ring-black  ring-opacity-5 overflow-hidden">
+                  <div className="relative grid gap-6 bg-[#161D24] px-2 py-6 sm:gap-8 ">
+                    <a
+                      href="/"
+                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                    >
+                      <div className="ml-4">
+                        <p className="text-base font-medium text-white">
+                          Lift
+                        </p>
+                 
+                      </div>
+                    </a>
+                    <a
+                      href="/"
+                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                    >
+                      <div className="ml-4">
+                        <p className="text-base font-medium text-white">
+                          Esclators
+                        </p>
+                 
+                      </div>
+                    </a>
+                    <a
+                      href="/"
+                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                    >
+                      <div className="ml-4">
+                        <p className="text-base font-medium text-white">
+                          Lift Spare parts
+                        </p>
+                       
+                      </div>
+                    </a>
+                    <a
+                      href="/"
+                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                    >
+                      <div className="ml-4">
+                        <p className="text-base font-medium text-white">
+                        Escalator spare parts
+                        </p>
+                       
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>            
+            {/* second dropdown end here */}
+
+            {/* third dropdown start here */}
+            <div className="relative md:mr-4">
+              <button
+                type="button"
+                className="
+                   group rounded-md text-gray-300 inline-flex items-center text-base font-medium focus:outline-none pb-8'
+                  "
+                onMouseEnter={() => (setFlyer2(!flyer), setFlyerTwo2(false))}
+              >
+                <span className="tr04 text-xl">Services</span>
+                <svg
+                  className={
+                    flyer2 === true
+                      ? "transform rotate-180 ml-3 h-5 w-5 transition ease-out duration-200"
+                      : "ml-2 h-5 w-5 text-gray-400 group-hover:text-gray-500"
+                  }
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
+              <div
+                onMouseLeave={() => setFlyer2(false)}
+                className={
+                  flyer2
+                    ? "opacity-100 translate-y-0 transition ease-out duration-200 absolute z-10 -ml-4 mt-3 g327  transform px-2 w-screen max-w-sm sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+                    : "hidden opacity-0 translate-y-1 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+                }
+              >
+                <div className="rounded-lg shadow-lg ring-1 ring-black  ring-opacity-5 overflow-hidden">
+                  <div className="relative grid gap-6 bg-[#161D24] px-2 py-6 sm:gap-8 ">
+                    <a
+                      href="/"
+                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                    >
+                      <div className="ml-4">
+                        <p className="text-base font-medium text-white">
+                          New Installation Services
+                        </p>
+                 
+                      </div>
+                    </a>
+                    <a
+                      href="/"
+                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                    >
+                      <div className="ml-4">
+                        <p className="text-base font-medium text-white">
+                          Annual Maintainence Services
+                        </p>
+                       
+                      </div>
+                    </a>
+                    <a
+                      href="/"
+                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                    >
+                      <div className="ml-4">
+                        <p className="text-base font-medium text-white">
+                        Breakdown Services
+                        </p>
+                       
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* third dropdown end here */}
+            
+            <a class="mr-5 cursor-pointer text-xl text-gray-300 hover:text-white font-semibold tr04">
+              Shops
+            </a>
+           
+                  {/* fourth dropdown start here */}
+            <div className="relative md:mr-4">
+              <button
+                type="button"
+                className="
+                   group rounded-md text-gray-300 inline-flex items-center text-base font-medium focus:outline-none pb-8'
+                  "
+                onMouseEnter={() => (setFlyer3(!flyer), setFlyerTwo3(false))}
+              >
+                <span className="tr04 text-xl">Customer Services</span>
+                <svg
+                  className={
+                    flyer3 === true
+                      ? "transform rotate-180 ml-3 h-5 w-5 transition ease-out duration-200"
+                      : "ml-2 h-5 w-5 text-gray-400 group-hover:text-gray-500"
+                  }
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
+              <div
+                onMouseLeave={() => setFlyer3(false)}
+                className={
+                  flyer3
+                    ? "opacity-100 translate-y-0 transition ease-out duration-200 absolute z-10 -ml-4 mt-3 g327  transform px-2 w-screen max-w-sm sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+                    : "hidden opacity-0 translate-y-1 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+                }
+              >
+                <div className="rounded-lg shadow-lg ring-1 ring-black  ring-opacity-5 overflow-hidden">
+                  <div className="relative grid gap-6 bg-[#161D24] px-2 py-6 sm:gap-8 ">
+                    <a
+                      href="/"
+                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                    >
+                      <div className="ml-4">
+                        <p className="text-base font-medium text-white">
+                          Your orders
+                        </p>
+                 
+                      </div>
+                    </a>
+                    <a
+                      href="/"
+                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                    >
+                      <div className="ml-4">
+                        <p className="text-base font-medium text-white">
+                          Return & Refunds
+                        </p>
+                       
+                      </div>
+                    </a>
+                    <a
+                      href="/"
+                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                    >
+                      <div className="ml-4">
+                        <p className="text-base font-medium text-white">
+                        Manage addresses
+                        </p>
+                       
+                      </div>
+                    </a>
+                    <a
+                      href="/"
+                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                    >
+                      <div className="ml-4">
+                        <p className="text-base font-medium text-white">
+                        Paytm Settings
+                        </p>
+                       
+                      </div>
+                    </a>
+                    <a
+                      href="/"
+                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                    >
+                      <div className="ml-4">
+                        <p className="text-base font-medium text-white">
+                        Account Settings
+                        </p>
+                       
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* fourth dropdown end here */}
+            
+
+              {/* fifth dropdown start here */}
+              <div className="relative md:mr-4">
+              <button
+                type="button"
+                className="
+                   group rounded-md text-gray-300 inline-flex items-center text-base font-medium focus:outline-none pb-8'
+                  "
+                onMouseEnter={() => (setFlyer4(!flyer), setFlyerTwo4(false))}
+              >
+                <span className="tr04 text-xl">Register</span>
+                <svg
+                  className={
+                    flyer4 === true
+                      ? "transform rotate-180 ml-3 h-5 w-5 transition ease-out duration-200"
+                      : "ml-2 h-5 w-5 text-gray-400 group-hover:text-gray-500"
+                  }
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
+              <div
+                onMouseLeave={() => setFlyer4(false)}
+                className={
+                  flyer4
+                    ? "opacity-100 translate-y-0 transition ease-out duration-200 absolute z-10 -ml-4 mt-3 g327  transform px-2 w-screen max-w-sm sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+                    : "hidden opacity-0 translate-y-1 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+                }
+              >
+                <div className="rounded-lg shadow-lg ring-1 ring-black  ring-opacity-5 overflow-hidden">
+                  <div className="relative grid gap-6 bg-[#161D24] px-2 py-6 sm:gap-8 ">
+                    <a
+                      href="/"
+                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                    >
+                      <div className="ml-4">
+                        <p className="text-base font-medium text-white">
+                          Consumer Registration
+                        </p>
+                 
+                      </div>
+                    </a>
+                    <a
+                      href="/"
+                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                    >
+                      <div className="ml-4">
+                        <p className="text-base font-medium text-white">
+                        Engineer Registration
+                        </p>
+                       
+                      </div>
+                    </a>
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* fifth dropdown end here */}
+
+
+                  {/* sixth dropdown start here */}
+              <div className="relative md:mr-4">
+              <button
+                type="button"
+                className="
+                   group rounded-md text-gray-300 inline-flex items-center text-base font-medium focus:outline-none pb-8'
+                  "
+                onMouseEnter={() => (setFlyer5(!flyer), setFlyerTwo5(false))}
+              >
+                <span className="tr04 text-xl">Login</span>
+                <svg
+                  className={
+                    flyer5 === true
+                      ? "transform rotate-180 ml-3 h-5 w-5 transition ease-out duration-200"
+                      : "ml-2 h-5 w-5 text-gray-400 group-hover:text-gray-500"
+                  }
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
+              <div
+                onMouseLeave={() => setFlyer5(false)}
+                className={
+                  flyer5
+                    ? "opacity-100 translate-y-0 transition ease-out duration-200 absolute z-10 -ml-4 mt-3 g327  transform px-2 w-screen max-w-sm sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+                    : "hidden opacity-0 translate-y-1 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+                }
+              >
+                <div className="rounded-lg shadow-lg ring-1 ring-black  ring-opacity-5 overflow-hidden">
+                  <div className="relative grid gap-6 bg-[#161D24] px-2 py-6 sm:gap-8 ">
+                    <a
+                      href="/"
+                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                    >
+                      <div className="ml-4">
+                        <p className="text-base font-medium text-white">
+                          Consumer Login
+                        </p>
+                 
+                      </div>
+                    </a>
+                    <a
+                      href="/"
+                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                    >
+                      <div className="ml-4">
+                        <p className="text-base font-medium text-white">
+                        Engineer Login
+                        </p>
+                       
+                      </div>
+                    </a>
+                    <a
+                      href="/"
+                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                    >
+                      <div className="ml-4">
+                        <p className="text-base font-medium text-white">
+                        Admin Login
+                        </p>
+                       
+                      </div>
+                    </a>
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* sixth dropdown end here */}
+
+
+            <a class="mr-5 cursor-pointer text-gray-300 text-xl hover:text-white font-semibold tr04">
+              Contact Us
+            </a>
+
+            <a class="mr-5 cursor-pointer text-xl text-gray-300 hover:text-white font-semibold tr04">
+              Cart
+            </a>
+          </div>
+      
+        
         </div>
       </div>
-    </nav>
+    </header>
   );
 }
-
-export default Navbar;
