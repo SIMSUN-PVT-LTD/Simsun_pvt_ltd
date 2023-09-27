@@ -15,7 +15,7 @@ const Homepage = () => {
             <div className="text-5xl text-white  text-center uppercase font-bold sm:mb-10 mt-24 sm:mt-0">
               Welcome to Simsun Electric
             </div>
-            <div className="text-white text-2xl text-center   ">
+            <div className="text-white sm:text-2xl mt-5 sm:mt-0 text-center   ">
               We Believe this is the key of any successful relationship and it's
               important to us that our clients and team members have a strong
               foundation trust in each other.
@@ -31,24 +31,24 @@ const Homepage = () => {
       <div className="bg-[#D7ADAE]">
         <div className="heading ">
           <h1 className="font-bold">About Simsun</h1>
-          <p className="text-xl">
+          <p className="text-xl sm:text-center text-left">
             The birth of SimSun Electric was founded in December 2016 after 2
             years of elevator and escalator project installation experience{" "}
-            <br /> all over the Rajasthan. The possibilities of SimSun Electric
+             all over the Rajasthan. The possibilities of SimSun Electric
             were built after left DMRC project in Dec 2014, and started work
             with a small franchise of <br />
             elevator and escalator energy in Jaipur.
           </p>
-          <p className="text-2xl">
+          <p className="text-2xl sm:text-center text-left">
             At there we found that everybody is moving on MW and large scale
             projects, that time we keep our focus to learning the Elevator and
             Escalator
-            <br /> project work. We were started our work as a freelancer in the
+             project work. We were started our work as a freelancer in the
             industry by small works with different franchises in roof top
             Backup, or net metering Projects.
-            <br /> And after all when we found that Elevator and Escalator roof
+             And after all when we found that Elevator and Escalator roof
             top market in Rajasthan rapidly growing,
-            <br /> then our ideas come into the reality and founded SimSun
+             then our ideas come into the reality and founded SimSun
             Electric Dec 2016.
           </p>
         </div>
@@ -56,7 +56,7 @@ const Homepage = () => {
 
       <div className="mb-2  flex flex-col ">
         <div className="whychoose  ">
-          <h1 className="text-4xl ">WHY CHOOSE US</h1>
+          <h1 className="text-3xl sm:text-4xl ">WHY CHOOSE US</h1>
           <div className="flex flex-col sm:flex-row ">
             <div className="serv ">
               <div className=" flex justify-center items-center">

@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from '../assets/img/logo.jpeg'
+import Logo from '../assets/img/logo1.jpg'
 
 export default function Header() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -24,7 +24,7 @@ export default function Header() {
 
   return (
     <header class=" top-0 w-full clearNav z-50 bg-[#161D24] flex ">
-      <div class=" w-full flex flex-wrap p-5 flex-col md:flex-row  justify-around ">
+      <div class=" w-full flex flex-wrap sm:p-5 flex-col md:flex-row  justify-around ">
         <div className="flex flex-row items-center justify-between  p-3 md:p-1 ">
           <a
             href="/"
@@ -107,10 +107,10 @@ export default function Header() {
                 }
               >
                 <div className="rounded-lg shadow-lg ring-1 ring-black  ring-opacity-5 overflow-hidden">
-                  <div className="relative grid gap-6 bg-[#161D24] px-2 py-6 sm:gap-8 ">
+                  <div className="relative grid gap  bg-[#161D24] px-2 py-4 sm:gap-8 ">
                     <a
-                      href="/"
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                      href="/about/ourcompany"
+                      className="-m-3  flex items-start rounded-lg hover:bg-gray-800 tr04"
                     >
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
@@ -120,8 +120,8 @@ export default function Header() {
                       </div>
                     </a>
                     <a
-                      href="/"
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                      href="/about/ourteam"
+                      className="-m-3  flex items-start rounded-lg hover:bg-gray-800 tr04"
                     >
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
@@ -133,7 +133,7 @@ export default function Header() {
                     </a>
                     <a
                       href="/"
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                      className="-m-3  flex items-start rounded-lg hover:bg-gray-800 tr04"
                     >
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
@@ -144,7 +144,7 @@ export default function Header() {
                     </a>
                     <a
                       href="/"
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                      className="-m-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
                     >
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
@@ -199,7 +199,7 @@ export default function Header() {
                   <div className="relative grid gap-6 bg-[#161D24] px-2 py-6 sm:gap-8 ">
                     <a
                       href="/"
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                      className="-m-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
                     >
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
@@ -210,7 +210,7 @@ export default function Header() {
                     </a>
                     <a
                       href="/"
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                      className="-m-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
                     >
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
@@ -221,7 +221,7 @@ export default function Header() {
                     </a>
                     <a
                       href="/"
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                      className="-m-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
                     >
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
@@ -232,7 +232,7 @@ export default function Header() {
                     </a>
                     <a
                       href="/"
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                      className="-m-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
                     >
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
@@ -287,7 +287,7 @@ export default function Header() {
                   <div className="relative grid gap-6 bg-[#161D24] px-2 py-6 sm:gap-8 ">
                     <a
                       href="/"
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                      className="-m-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
                     >
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
@@ -298,7 +298,7 @@ export default function Header() {
                     </a>
                     <a
                       href="/"
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                      className="-m-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
                     >
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
@@ -309,7 +309,7 @@ export default function Header() {
                     </a>
                     <a
                       href="/"
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                      className="-m-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
                     >
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
@@ -324,7 +324,7 @@ export default function Header() {
             </div>
             {/* third dropdown end here */}
             
-            <a class="mr-5 cursor-pointer text-xl text-gray-300 hover:text-white font-semibold tr04">
+            <a class="mr-5 cursor-pointer text-xl text-gray-300 hover:text-white font-medium tr04">
               Shops
             </a>
            
@@ -368,7 +368,7 @@ export default function Header() {
                   <div className="relative grid gap-6 bg-[#161D24] px-2 py-6 sm:gap-8 ">
                     <a
                       href="/"
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                      className="-m-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
                     >
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
@@ -379,7 +379,7 @@ export default function Header() {
                     </a>
                     <a
                       href="/"
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                      className="-m-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
                     >
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
@@ -390,7 +390,7 @@ export default function Header() {
                     </a>
                     <a
                       href="/"
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                      className="-m-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
                     >
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
@@ -401,7 +401,7 @@ export default function Header() {
                     </a>
                     <a
                       href="/"
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                      className="-m-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
                     >
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
@@ -412,7 +412,7 @@ export default function Header() {
                     </a>
                     <a
                       href="/"
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                      className="-m-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
                     >
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
@@ -468,7 +468,7 @@ export default function Header() {
                   <div className="relative grid gap-6 bg-[#161D24] px-2 py-6 sm:gap-8 ">
                     <a
                       href="/"
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                      className="-m-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
                     >
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
@@ -479,7 +479,7 @@ export default function Header() {
                     </a>
                     <a
                       href="/"
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                      className="-m-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
                     >
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
@@ -536,7 +536,7 @@ export default function Header() {
                   <div className="relative grid gap-6 bg-[#161D24] px-2 py-6 sm:gap-8 ">
                     <a
                       href="/"
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                      className="-m-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
                     >
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
@@ -547,7 +547,7 @@ export default function Header() {
                     </a>
                     <a
                       href="/"
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                      className="-m-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
                     >
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
@@ -558,7 +558,7 @@ export default function Header() {
                     </a>
                     <a
                       href="/"
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
+                      className="-m-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
                     >
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
