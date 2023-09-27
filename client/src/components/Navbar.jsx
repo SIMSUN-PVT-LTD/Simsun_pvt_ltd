@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from '../assets/img/logo1.jpg'
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -108,8 +109,8 @@ export default function Header() {
               >
                 <div className="rounded-lg shadow-lg ring-1 ring-black  ring-opacity-5 overflow-hidden">
                   <div className="relative grid gap  bg-[#161D24] px-2 py-4 sm:gap-8 ">
-                    <a
-                      href="/about/ourcompany"
+                    <Link
+                      to="/about/ourcompany"
                       className="-m-3  flex items-start rounded-lg hover:bg-gray-800 tr04"
                     >
                       <div className="ml-4">
@@ -118,9 +119,9 @@ export default function Header() {
                         </p>
                       
                       </div>
-                    </a>
-                    <a
-                      href="/about/ourteam"
+                    </Link>
+                    <Link
+                      to="/about/ourteam"
                       className="-m-3  flex items-start rounded-lg hover:bg-gray-800 tr04"
                     >
                       <div className="ml-4">
@@ -130,7 +131,7 @@ export default function Header() {
                         </p>
                        
                       </div>
-                    </a>
+                    </Link>
                     <a
                       href="/"
                       className="-m-3  flex items-start rounded-lg hover:bg-gray-800 tr04"
