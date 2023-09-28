@@ -5,17 +5,18 @@ import lift1 from "../../assets/img/lift1.jpg";
 import lift4 from "../../assets/img/lift4.jpg";
 import lift5 from "../../assets/img/lift5.jpg";
 import lift7 from "../../assets/img/lift7.jpg";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
   return (
     <>
-      <div className="bg-green-500 h-[55rem] sm:flex">
-        <div className=" bg-[#545a5d] h-1/2 sm:h-full sm:w-4/6 flex justify-center items-center">
-          <div className="  h-1/2 flex flex-col items-center justify-center p-10">
-            <div className="text-5xl text-white  text-center uppercase font-bold sm:mb-10 mt-24 sm:mt-0">
+      <div className="bg-[#545a5d] h-[35rem] sm:h-[55rem] sm:flex">
+        <div className=" bg-[#545a5d]  sm:h-full sm:w-4/6 flex justify-center items-center">
+          <div className="  h-1/2  flex flex-col items-center justify-center p-10">
+            <div className="sm:text-5xl text-white text-3xl text-center uppercase font-bold sm:mb-10 mt-24 sm:mt-0">
               Welcome to Simsun Electric
             </div>
-            <div className="text-white sm:text-2xl mt-5 sm:mt-0 text-center   ">
+            <div className="text-white sm:text-2xl text-sm mt-5 sm:mt-0 text-center   ">
               We Believe this is the key of any successful relationship and it's
               important to us that our clients and team members have a strong
               foundation trust in each other.
@@ -25,7 +26,7 @@ const Homepage = () => {
             </button>
           </div>
         </div>
-        <div className="bg-[#545a5d] h-1/2 sm:h-full sm:w-2/6"></div>
+        <div className="bg-[#545a5d] h-1/4 sm:h-full sm:w-2/6 hidden md:block"></div>
       </div>
 
       <div className="bg-[#D7ADAE]">
@@ -187,28 +188,28 @@ const Homepage = () => {
     <h2 className="title text-3xl">Our Products</h2>
     <div className="flex flex-wrap">
       <div className="w-full sm:w-1/2 md:w-1/4 p-4 hover:-translate-y-2 ease-in duration-300 cursor-pointer">
-        <a href="lift.html">
+        <Link to="lift.html">
           <img src={lift1} alt="Lift" className="w-full rounded-md" />
           <h4 className="text-2xl mt-2 text-center ">Lift</h4>
-        </a>
+        </Link>
       </div>
       <div className="w-full sm:w-1/2 md:w-1/4 p-4 hover:-translate-y-2 ease-in duration-300 cursor-pointer">
-        <a href="escalator.html">
+        <Link to="escalator.html">
           <img src={lift7} alt="Escalator" className="w-full rounded-md" />
           <h4 className="text-2xl mt-2 text-center ">Escalator</h4>
-        </a>
+        </Link>
       </div>
       <div className="w-full sm:w-1/2 md:w-1/4 p-4 hover:-translate-y-2 ease-in duration-300 cursor-pointer">
-        <a href="liftspareparts.html">
+        <Link to="liftspareparts.html">
           <img src={lift5} alt="Lift Spare Part" className="w-full rounded-md" />
           <h4 className="text-2xl mt-2 text-center ">Lift Spare Part</h4>
-        </a>
+        </Link>
       </div>
       <div className="w-full sm:w-1/2 md:w-1/4 p-4 hover:-translate-y-2 ease-in duration-300 cursor-pointer">
-        <a href="escalatorspareparts.html">
+        <Link to="escalatorspareparts.html">
           <img src={lift4} alt="Escalator Spare Part" className="w-full rounded-md " />
           <h4 className="text-2xl mt-2 text-center ">Escalator Spare Part</h4>
-        </a>
+        </Link>
       </div>
     </div>
   </div>
