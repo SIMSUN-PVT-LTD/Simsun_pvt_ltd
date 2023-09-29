@@ -7,6 +7,10 @@ import OurCompany from './CompanyPages/OurCompany/OurCompany'
 import OurTeam from './CompanyPages/OurTeam/OurTeam'
 import News from './CompanyPages/News/News'
 import OurCompanySuccess from './CompanyPages/OurCompanySuccess/OurCompanySuccess'
+import Lift from './CompanyPages/Product/Lift/Lift'
+import Esclator from './CompanyPages/Product/Esclator/Esclator'
+import LiftSparePart from './CompanyPages/Product/LiftSparePart/LiftSparePart'
+import EsclatorSparePart from './CompanyPages/Product/EsclatorSparePart/EsclatorSparePart'
 
 function App() {
 
@@ -21,6 +25,10 @@ function App() {
           <Route path='/about/news' element={<News/>}/>
           <Route path='/about/ourcompanysuccess' element={<OurCompanySuccess/>}/>
 
+          <Route path='/product/lift' element={<Lift/>}/>
+          <Route path='/product/esclator' element={<Esclator/>}/>
+          <Route path='/product/LiftSparePart' element={<LiftSparePart/>}/>
+          {/* <Route path='/product/EsclatorSparePart' element={<EsclatorSparePart/>}/> */}
 
       </Route>
     </Routes>
