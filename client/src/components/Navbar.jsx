@@ -64,7 +64,7 @@ export default function Header() {
           }
         >
         
-          <div class="md:ml-auto md:mr-auto  font-4 pt-1 md:pl-14 pl-1 flex flex-wrap  md:text-base text-1xl md:justify-center items-center  flex-col sm:flex-row ">
+          <div class="md:ml-auto md:mr-auto  font-4 pt-1 md:pl-14 pl-1 flex flex-wrap  md:text-base text-1xl md:justify-center sm:items-center   flex-col sm:flex-row ">
             <a class="mr-11 pr-2 text-xl cursor-pointer text-gray-300 hover:text-white font-semibold  ">
               Features
             </a>
