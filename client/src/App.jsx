@@ -28,7 +28,7 @@ function App() {
           <Route path='/product/lift' element={<Lift/>}/>
           <Route path='/product/esclator' element={<Esclator/>}/>
           <Route path='/product/LiftSparePart' element={<LiftSparePart/>}/>
-          {/* <Route path='/product/EsclatorSparePart' element={<EsclatorSparePart/>}/> */}
+          <Route path='/product/EsclatorSparePart' element={<EsclatorSparePart/>}/>
 
       </Route>
     </Routes>

@@ -36,14 +36,26 @@ const Footer = () => {
           </Link>
         </div>
         <div className="address">
-          <Link to="#" className='ml-7'>
+          <Link to="#" className='text-sm sm:text-md'>
 
+              <div className=' ml-[59px] '>
 
-            Flat No. T-1, 104, 1st Floor, Tower-1 
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Plot No. GH 01/A, Sector 16C,
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Exotica Dreamville, Greater Noida,
+              Flat No. T-1, 104, 1st Floor, Tower-1 
+              </div>
+              <div className=' ml-[59px]'>
+              No. GH 01/A, Sector 16C,
+              </div>
+              <div className=' ml-[59px]'>
+              Exotica Dreamville, Greater Noida,
+              </div>
+              <div className=' ml-[59px]'>
+              U.P. 201203
+              </div>
+            {/* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Plot 
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;
-             &nbsp;  U.P. 201203 </Link>
+             &nbsp;   */}
+              </Link>
         </div>
         <br />
       </div>

@@ -59,7 +59,7 @@ const Homepage = () => {
         <div className="whychoose  ">
           <h1 className="text-3xl sm:text-4xl ">WHY CHOOSE US</h1>
           <div className="flex flex-col sm:flex-row ">
-            <div className="serv ">
+            <div className="serv text-black">
               <div className=" flex justify-center items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@ const Homepage = () => {
               </div>
 
               <h2 className="font-bold text-3xl">Wide Range of Products</h2>
-              <p className="text-xl">
+              <p className="text-xl text-black">
                 Explore our extensive selection of electronics, including
                 smartphones, laptops, smart home devices, gaming consoles, and
                 more.
@@ -103,7 +103,7 @@ const Homepage = () => {
               </div>
 
               <h2 className="font-bold text-3xl">Quality Assurance</h2>
-              <p className="text-xl">
+              <p className="text-xl  text-black">
                 We believe in delivering only the highest quality products from
                 trusted brands. Our team carefully selects each item in our
                 catalog to ensure reliability and performance.
@@ -128,7 +128,7 @@ const Homepage = () => {
               </div>
 
               <h2 className="font-bold text-3xl">Competitive Pricing</h2>
-              <p className="text-xl">
+              <p className="text-xl  text-black">
                 We offer competitive prices to ensure you get the best value for
                 your money. Plus, don't miss out on our exclusive deals and
                 promotions.
@@ -153,7 +153,7 @@ const Homepage = () => {
               </div>
 
               <h2 className="font-bold text-3xl">Secure Shopping</h2>
-              <p className="text-xl">
+              <p className="text-xl  text-black">
                 Shop with confidence knowing that your data is protected with
                 state-of-the-art security measures. Your privacy and security
                 are our top priorities.
