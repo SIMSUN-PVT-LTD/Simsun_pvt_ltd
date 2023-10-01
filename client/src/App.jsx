@@ -11,6 +11,8 @@ import Lift from './CompanyPages/Product/Lift/Lift'
 import Esclator from './CompanyPages/Product/Esclator/Esclator'
 import LiftSparePart from './CompanyPages/Product/LiftSparePart/LiftSparePart'
 import EsclatorSparePart from './CompanyPages/Product/EsclatorSparePart/EsclatorSparePart'
+import NewInstallationServices from './CompanyPages/Services/NewInstallationServices'
+import AnnualMaintainenceServices from './CompanyPages/Services/AnnualMaintainenceServices'
 
 function App() {
 
@@ -29,6 +31,9 @@ function App() {
           <Route path='/product/esclator' element={<Esclator/>}/>
           <Route path='/product/LiftSparePart' element={<LiftSparePart/>}/>
           <Route path='/product/EsclatorSparePart' element={<EsclatorSparePart/>}/>
+
+          <Route path='/services/NewInstallationServices' element={<NewInstallationServices/>}/>
+          <Route path='/services/AnnualMaintainenceServices' element={<AnnualMaintainenceServices/>}/>
 
       </Route>
     </Routes>

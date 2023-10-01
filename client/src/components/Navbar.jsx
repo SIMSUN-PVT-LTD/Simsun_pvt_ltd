@@ -24,9 +24,9 @@ export default function Header() {
   const [flyerTwo5, setFlyerTwo5] = React.useState(false);
 
   return (
-    <header class=" top-0 w-full  z-50 bg-[#161D24] flex ">
-      <div class=" w-full  p-2  flex flex-wrap  flex-col md:flex-row  justify-around ">
-        <div className="flex flex-row items-center justify-between   md:p-1  ">
+    <header class=" top-0 w-full  z-50 bg-[#161D24] flex justify-around">
+      <div class=" w-full  p-2  flex flex-wrap  flex-col md:flex-row  md:justify-normal xl:justify-around  xl:bg-inherit    justify-around ">
+        <div className="flex flex-row  items-center justify-between  md:p-1  ">
           <Link
             to="/"
             class="flex text-3xl text-white font-medium mb-4 md:mb-0 "
@@ -78,7 +78,7 @@ export default function Header() {
                 className="
                    group rounded-md text-gray-300 inline-flex items-center text-base font-medium focus:outline-none pb-8'
                   "
-                onMouseEnter={() => (setFlyer(!flyer), setFlyerTwo(false))}
+                onMouseEnter={() => (setFlyer(!flyer), setFlyerTwo(false),setFlyer1(false),setFlyer2(false),setFlyer3(false),setFlyer4(false),setFlyer5(false))}
               >
                 <span className=" text-xl">About Us</span>
                 <svg
@@ -167,7 +167,7 @@ export default function Header() {
                 className="
                    group rounded-md text-gray-300 inline-flex items-center text-base font-medium focus:outline-none pb-8'
                   "
-                onMouseEnter={() => (setFlyer1(!flyer1), setFlyerTwo1(false))}
+                onMouseEnter={() => (setFlyer1(!flyer1), setFlyerTwo1(false),setFlyer(false),setFlyer2(false),setFlyer3(false),setFlyer4(false),setFlyer5(false))}
               >
                 <span className=" text-xl">Product</span>
                 <svg
@@ -255,7 +255,7 @@ export default function Header() {
                 className="
                    group rounded-md text-gray-300 inline-flex items-center text-base font-medium focus:outline-none pb-8'
                   "
-                onMouseEnter={() => (setFlyer2(!flyer), setFlyerTwo2(false))}
+                onMouseEnter={() => (setFlyer2(!flyer), setFlyerTwo2(false),setFlyer1(false),setFlyer(false),setFlyer3(false),setFlyer4(false),setFlyer5(false))}
               >
                 <span className=" text-xl">Services</span>
                 <svg
@@ -287,7 +287,7 @@ export default function Header() {
                 <div className="rounded-lg shadow-lg ring-1 ring-black  ring-opacity-5 overflow-hidden">
                   <div className="relative grid gap-6 bg-[#161D24] px-2 py-6 sm:gap-2 ">
                     <Link
-                      to="/"
+                      to="/services/NewInstallationServices"
                       className="-m-3 flex items-start rounded-lg hover:bg-gray-800 "
                     >
                       <div className="ml-4">
@@ -298,7 +298,7 @@ export default function Header() {
                       </div>
                     </Link>
                     <Link
-                      to="/"
+                      to="/services/AnnualMaintainenceServices"
                       className="-m-3 flex items-start rounded-lg hover:bg-gray-800 "
                     >
                       <div className="ml-4">
@@ -336,7 +336,7 @@ export default function Header() {
                 className="
                    group rounded-md text-gray-300 inline-flex items-center text-base font-medium focus:outline-none pb-8'
                   "
-                onMouseEnter={() => (setFlyer3(!flyer), setFlyerTwo3(false))}
+                onMouseEnter={() => (setFlyer3(!flyer), setFlyerTwo3(false),setFlyer1(false),setFlyer2(false),setFlyer(false),setFlyer4(false),setFlyer5(false))}
               >
                 <span className=" text-xl">Customer Services</span>
                 <svg
@@ -436,7 +436,7 @@ export default function Header() {
                 className="
                    group rounded-md text-gray-300 inline-flex items-center text-base font-medium focus:outline-none pb-8'
                   "
-                onMouseEnter={() => (setFlyer4(!flyer), setFlyerTwo4(false))}
+                onMouseEnter={() => (setFlyer4(!flyer), setFlyerTwo4(false),setFlyer1(false),setFlyer2(false),setFlyer3(false),setFlyer(false),setFlyer5(false))}
               >
                 <span className=" text-xl">Register</span>
                 <svg
@@ -504,7 +504,7 @@ export default function Header() {
                 className="
                    group rounded-md text-gray-300 inline-flex items-center text-base font-medium focus:outline-none pb-8'
                   "
-                onMouseEnter={() => (setFlyer5(!flyer), setFlyerTwo5(false))}
+                onMouseEnter={() => (setFlyer5(!flyer), setFlyerTwo5(false),setFlyer1(false),setFlyer2(false),setFlyer3(false),setFlyer4(false),setFlyer(false))}
               >
                 <span className=" text-xl">Login</span>
                 <svg

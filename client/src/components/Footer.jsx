@@ -96,7 +96,7 @@ const Footer = () => {
     </div>
   </div>
   <div className="bottom">
-    <p>Copyright © 2023 <Link to="#">Teksila</Link> All rights reserved</p>
+    <p>Copyright © 2023  All rights reserved Simsun Electric Pvt Ltd Designed by <Link to="https://teksila.in/">Teksila.in</Link></p>
   </div>
 </footer>
 

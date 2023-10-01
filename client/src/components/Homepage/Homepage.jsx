@@ -10,10 +10,9 @@ import { Link } from "react-router-dom";
 const Homepage = () => {
   return (
     <>
-      <div className="bg-[#545a5d] h-[35rem] sm:h-[55rem] sm:flex">
-        <div className=" bg-[#545a5d]  sm:h-full sm:w-4/6 flex justify-center items-center">
-          <div className="  h-1/2  flex flex-col items-center justify-center p-10">
-            <div className="sm:text-5xl text-white text-3xl text-center uppercase font-bold sm:mb-10 mt-24 sm:mt-0">
+      <div className=" h-[28rem]  sm:h-[55rem] sm:flex">
+         <div className="   w-full flex flex-col bg-[#555A5C] items-center justify-center p-10">
+            <div className="sm:text-5xl text-white  text-3xl text-center uppercase font-bold sm:mb-10 mt-24 sm:mt-0">
               Welcome to Simsun Electric
             </div>
             <div className="text-white sm:text-2xl text-sm mt-5 sm:mt-0 text-center   ">
@@ -22,11 +21,10 @@ const Homepage = () => {
               foundation trust in each other.
             </div>
             <button className="bg-red-500 mt-10 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">
-              Join Us Now!
+              Explore Now!
             </button>
           </div>
-        </div>
-        <div className="bg-[#545a5d] h-1/4 sm:h-full sm:w-2/6 hidden md:block"></div>
+        
       </div>
 
       <div className="bg-[#D7ADAE]">
@@ -214,6 +212,10 @@ const Homepage = () => {
     </div>
   </div>
 </div>
+
+{/* <div className="bg-red-500">
+  All copyright reserved
+</div> */}
 
     </>
   );
