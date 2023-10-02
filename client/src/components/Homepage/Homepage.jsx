@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const Homepage = () => {
   return (
     <>
-      <div className=" h-[28rem]  sm:h-[55rem] sm:flex">
+      <div className=" h-[28rem]  sm:h-[28rem] sm:flex">
          <div className="   w-full flex flex-col bg-[#555A5C] items-center justify-center p-10">
             <div className="sm:text-5xl text-white  text-3xl text-center uppercase font-bold sm:mb-10 mt-24 sm:mt-0">
               Welcome to Simsun Electric
@@ -20,9 +20,9 @@ const Homepage = () => {
               important to us that our clients and team members have a strong
               foundation trust in each other.
             </div>
-            <button className="bg-red-500 mt-10 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">
+            <Link to='/about/ourcompany' className="bg-red-500 mt-10 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">
               Explore Now!
-            </button>
+            </Link>
           </div>
         
       </div>

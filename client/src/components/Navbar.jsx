@@ -309,7 +309,7 @@ export default function Header() {
                       </div>
                     </Link>
                     <Link
-                      to="/"
+                      to="/services/BreakdownServices"
                       className="-m-3 flex items-start rounded-lg hover:bg-gray-800 "
                     >
                       <div className="ml-4">
@@ -325,9 +325,9 @@ export default function Header() {
             </div>
             {/* third dropdown end here */}
             
-            <a class="mr-5 cursor-pointer text-xl text-gray-300 hover:text-white font-medium ">
+            <Link to='/shop' className="mr-5 cursor-pointer text-xl text-gray-300 hover:text-white font-medium ">
               Shops
-            </a>
+            </Link>
            
                   {/* fourth dropdown start here */}
             <div className="relative md:mr-4">
@@ -406,7 +406,7 @@ export default function Header() {
                     >
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
-                        Paytm Settings
+                        Payment Settings
                         </p>
                        
                       </div>

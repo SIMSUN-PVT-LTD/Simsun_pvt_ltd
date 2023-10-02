@@ -13,6 +13,8 @@ import LiftSparePart from './CompanyPages/Product/LiftSparePart/LiftSparePart'
 import EsclatorSparePart from './CompanyPages/Product/EsclatorSparePart/EsclatorSparePart'
 import NewInstallationServices from './CompanyPages/Services/NewInstallationServices'
 import AnnualMaintainenceServices from './CompanyPages/Services/AnnualMaintainenceServices'
+import BreakdownServices from './CompanyPages/Services/BreakdownServices'
+import Shop from './CompanyPages/shop/Shop'
 
 function App() {
 
@@ -34,6 +36,9 @@ function App() {
 
           <Route path='/services/NewInstallationServices' element={<NewInstallationServices/>}/>
           <Route path='/services/AnnualMaintainenceServices' element={<AnnualMaintainenceServices/>}/>
+          <Route path='/services/BreakdownServices' element={<BreakdownServices/>}/>
+        
+          <Route path='/shop' element={<Shop/>}/>
 
       </Route>
     </Routes>
