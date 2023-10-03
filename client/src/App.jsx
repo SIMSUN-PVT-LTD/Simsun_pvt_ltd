@@ -15,6 +15,8 @@ import NewInstallationServices from './CompanyPages/Services/NewInstallationServ
 import AnnualMaintainenceServices from './CompanyPages/Services/AnnualMaintainenceServices'
 import BreakdownServices from './CompanyPages/Services/BreakdownServices'
 import Shop from './CompanyPages/shop/Shop'
+import YourOrders from './CompanyPages/customerServices/YourOrders'
+import ReturnandRefund from './CompanyPages/customerServices/ReturnandRefund'
 
 function App() {
 
@@ -39,6 +41,9 @@ function App() {
           <Route path='/services/BreakdownServices' element={<BreakdownServices/>}/>
         
           <Route path='/shop' element={<Shop/>}/>
+
+          <Route path='/customerservices/YourOrders' element={<YourOrders/>}/>
+          <Route path='/customerservices/ReturnandRefunds' element={<ReturnandRefund/>}/>
 
       </Route>
     </Routes>

@@ -29,9 +29,12 @@ export default function Header() {
         <div className="flex flex-row  items-center justify-between  md:p-1  ">
           <Link
             to="/"
-            class="flex text-3xl text-white font-medium mb-4 md:mb-0 "
+            class="flex text-3xl text-white border  justify-center items-center border-red-400 rounded-full overflow-hidden font-medium mb-4 md:mb-0 "
           >
-          <img src={Logo} alt="" className="w-14" />
+          <div className=" rounded-full">
+          <img src={Logo} alt="" className="w-28" />
+
+          </div>
           </Link>
           <button
             className="text-white pb-4 cursor-pointer leading-none px-3 py-1 md:hidden outline-none focus:outline-none content-end ml-auto "
@@ -368,7 +371,7 @@ export default function Header() {
                 <div className="rounded-lg shadow-lg ring-1 ring-black  ring-opacity-5 overflow-hidden">
                   <div className="relative grid gap-6 bg-[#161D24] px-2 py-6 sm:gap-2 ">
                     <Link
-                      to="/"
+                      to="/customerservices/YourOrders"
                       className="-m-3 flex items-start rounded-lg hover:bg-gray-800 "
                     >
                       <div className="ml-4">
@@ -379,7 +382,7 @@ export default function Header() {
                       </div>
                     </Link>
                     <Link
-                      to="/"
+                      to="/customerservices/ReturnandRefunds"
                       className="-m-3 flex items-start rounded-lg hover:bg-gray-800 "
                     >
                       <div className="ml-4">
