@@ -17,6 +17,8 @@ import BreakdownServices from './CompanyPages/Services/BreakdownServices'
 import Shop from './CompanyPages/shop/Shop'
 import YourOrders from './CompanyPages/customerServices/YourOrders'
 import ReturnandRefund from './CompanyPages/customerServices/ReturnandRefund'
+import ManageAddress from './CompanyPages/customerServices/ManageAddress'
+import PaymentSetting from './CompanyPages/customerServices/PaymentSetting'
 
 function App() {
 
@@ -44,6 +46,8 @@ function App() {
 
           <Route path='/customerservices/YourOrders' element={<YourOrders/>}/>
           <Route path='/customerservices/ReturnandRefunds' element={<ReturnandRefund/>}/>
+          <Route path='/customerservices/ManageAddress' element={<ManageAddress/>}/>
+          <Route path='/customerservices/PaymentSetting' element={<PaymentSetting/>}/>
 
       </Route>
     </Routes>

@@ -393,7 +393,7 @@ export default function Header() {
                       </div>
                     </Link>
                     <Link
-                      to="/"
+                      to="/customerservices/ManageAddress"
                       className="-m-3 flex items-start rounded-lg hover:bg-gray-800 "
                     >
                       <div className="ml-4">
@@ -404,7 +404,7 @@ export default function Header() {
                       </div>
                     </Link>
                     <Link
-                      to="/"
+                      to="/customerservices/PaymentSetting"
                       className="-m-3 flex items-start rounded-lg hover:bg-gray-800 "
                     >
                       <div className="ml-4">
