@@ -19,6 +19,8 @@ import YourOrders from './CompanyPages/customerServices/YourOrders'
 import ReturnandRefund from './CompanyPages/customerServices/ReturnandRefund'
 import ManageAddress from './CompanyPages/customerServices/ManageAddress'
 import PaymentSetting from './CompanyPages/customerServices/PaymentSetting'
+import AccountSettings from './CompanyPages/customerServices/AccountSetting'
+import ConsumerRegister from './Auth/ConsumerRegister'
 
 function App() {
 
@@ -48,6 +50,11 @@ function App() {
           <Route path='/customerservices/ReturnandRefunds' element={<ReturnandRefund/>}/>
           <Route path='/customerservices/ManageAddress' element={<ManageAddress/>}/>
           <Route path='/customerservices/PaymentSetting' element={<PaymentSetting/>}/>
+          <Route path='/customerservices/AccountSetting' element={<AccountSettings/>}/>
+          
+          <Route path='/auth/consumerRegistration' element={<ConsumerRegister/>}/>
+
+          
 
       </Route>
     </Routes>

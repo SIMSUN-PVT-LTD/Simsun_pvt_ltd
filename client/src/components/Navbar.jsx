@@ -68,9 +68,7 @@ export default function Header() {
         >
         
           <div class="md:ml-auto md:mr-auto  font-4 pt-1 md:pl-14 pl-1 flex flex-wrap  md:text-base text-1xl md:justify-center sm:items-center   flex-col sm:flex-row ">
-            <a class="mr-11 pr-2 text-xl cursor-pointer text-gray-300 hover:text-white font-semibold  ">
-              Features
-            </a>
+            
 
 
 
@@ -415,7 +413,7 @@ export default function Header() {
                       </div>
                     </Link>
                     <Link
-                      to="/"
+                      to="/customerservices/AccountSetting"
                       className="-m-3 flex items-start rounded-lg hover:bg-gray-800 "
                     >
                       <div className="ml-4">
@@ -471,7 +469,7 @@ export default function Header() {
                 <div className="rounded-lg shadow-lg ring-1 ring-black  ring-opacity-5 overflow-hidden">
                   <div className="relative grid gap-6 bg-[#161D24] px-2 py-6 sm:gap-2 ">
                     <Link
-                      to="/"
+                      to="/auth/consumerRegistration"
                       className="-m-3 flex items-start rounded-lg hover:bg-gray-800 "
                     >
                       <div className="ml-4">
