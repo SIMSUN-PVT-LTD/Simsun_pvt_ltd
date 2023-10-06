@@ -1,6 +1,5 @@
 
 import { Route,  Routes } from 'react-router-dom'
-import './App.css'
 import Layout from './Layout/Layout'
 import Homepage from './components/Homepage/Homepage'
 import OurCompany from './CompanyPages/OurCompany/OurCompany'
@@ -20,7 +19,11 @@ import ReturnandRefund from './CompanyPages/customerServices/ReturnandRefund'
 import ManageAddress from './CompanyPages/customerServices/ManageAddress'
 import PaymentSetting from './CompanyPages/customerServices/PaymentSetting'
 import AccountSettings from './CompanyPages/customerServices/AccountSetting'
-import ConsumerRegister from './Auth/ConsumerRegister'
+import ConsumerRegister from './Auth/Login/ConsumerRegister'
+import ConsumerLogin from './Auth/ConsumerLogin'
+import EngineerRegister from './Auth/Login/EngineerRegister'
+import EngineerLogin from './Auth/EngineerLogin'
+
 
 function App() {
 
@@ -53,6 +56,10 @@ function App() {
           <Route path='/customerservices/AccountSetting' element={<AccountSettings/>}/>
           
           <Route path='/auth/consumerRegistration' element={<ConsumerRegister/>}/>
+          <Route path='/auth/engineerRegistration' element={<EngineerRegister/>}/>
+        
+          <Route path='/auth/consumerLogin' element={<ConsumerLogin/>}/>
+          <Route path='/auth/EngineerLogin' element={<EngineerLogin/>}/>
 
           
 

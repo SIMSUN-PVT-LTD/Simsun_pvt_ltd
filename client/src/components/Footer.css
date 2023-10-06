@@ -11,7 +11,7 @@
   --text-dark: #282d31;
   --text-light: #767268;
   --extra-light: #f3f4f6;
-
+ 
   --max-width: 1200px;
 }
 *{
@@ -403,6 +403,7 @@ footer .bottom{
   text-align: center;
   color: #d9d9d9;
   padding: 0 40px 5px 0;
+  margin-bottom: 0 !important;
 }
 footer .bottom a{
   color: #eb2f06;

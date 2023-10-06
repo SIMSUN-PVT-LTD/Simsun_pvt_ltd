@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <>
-      <footer className=''>
+      <footer className='-translate-y-20 '>
   <div className="content ">
     <div className="left box">
       <div className="upper">

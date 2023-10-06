@@ -150,7 +150,7 @@ export default function Header() {
                     >
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
-                        News
+                        News & References
                         </p>
                        
                       </div>
@@ -480,7 +480,7 @@ export default function Header() {
                       </div>
                     </Link>
                     <Link
-                      to="/"
+                      to="/auth/engineerRegistration"
                       className="-m-3 flex items-start rounded-lg hover:bg-gray-800 "
                     >
                       <div className="ml-4">
@@ -537,7 +537,7 @@ export default function Header() {
                 <div className="rounded-lg shadow-lg ring-1 ring-black  ring-opacity-5 overflow-hidden">
                   <div className="relative grid gap-6 bg-[#161D24] px-2 py-6 sm:gap-2 ">
                     <Link
-                      to="/"
+                      to="/auth/consumerLogin"
                       className="-m-3 flex items-start rounded-lg hover:bg-gray-800 "
                     >
                       <div className="ml-4">
@@ -548,7 +548,7 @@ export default function Header() {
                       </div>
                     </Link>
                     <Link
-                      to="/"
+                      to="/auth/EngineerLogin"
                       className="-m-3 flex items-start rounded-lg hover:bg-gray-800 "
                     >
                       <div className="ml-4">
