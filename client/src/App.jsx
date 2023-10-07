@@ -23,6 +23,9 @@ import ConsumerRegister from './Auth/Login/ConsumerRegister'
 import ConsumerLogin from './Auth/ConsumerLogin'
 import EngineerRegister from './Auth/Login/EngineerRegister'
 import EngineerLogin from './Auth/EngineerLogin'
+import AdminLogin from './Auth/AdminLogin'
+import ContactUs from './components/ContactUs'
+import Cart from './components/Cart'
 
 
 function App() {
@@ -60,6 +63,10 @@ function App() {
         
           <Route path='/auth/consumerLogin' element={<ConsumerLogin/>}/>
           <Route path='/auth/EngineerLogin' element={<EngineerLogin/>}/>
+          <Route path='/auth/AdminLogin' element={<AdminLogin/>}/>
+
+          <Route path='/ContactUs' element={<ContactUs/>}/>
+
 
           
 

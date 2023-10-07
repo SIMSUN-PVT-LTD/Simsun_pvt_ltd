@@ -559,7 +559,7 @@ export default function Header() {
                       </div>
                     </Link>
                     <Link
-                      to="/"
+                      to="/auth/AdminLogin"
                       className="-m-3 flex items-start rounded-lg hover:bg-gray-800 "
                     >
                       <div className="ml-4">
@@ -577,13 +577,13 @@ export default function Header() {
             {/* sixth dropdown end here */}
 
 
-            <a class="mr-5 cursor-pointer text-gray-300 text-xl hover:text-white font-semibold ">
+            <Link to={'/ContactUs'} class="mr-5 cursor-pointer text-gray-300 text-xl hover:text-white font-semibold ">
               Contact Us
-            </a>
+            </Link>
 
-            <a class="mr-5 cursor-pointer text-xl text-gray-300 hover:text-white font-semibold ">
+            <Link to={'/Cart'} class="mr-5 cursor-pointer text-xl text-gray-300 hover:text-white font-semibold ">
               Cart
-            </a>
+            </Link>
           </div>
       
         
