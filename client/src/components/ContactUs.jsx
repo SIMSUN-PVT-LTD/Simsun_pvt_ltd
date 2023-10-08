@@ -2,13 +2,13 @@ import React from "react";
 
 function ContactUs() {
   return (
-    <div className="bg-gray-100 min-h-screen py-10">
+    <div className="bg-gray-100 min-h-screen py-10 ">
       <div className="container mx-auto px-4">
         <h1 className="text-3xl font-semibold text-gray-800 mb-6">
           Contact Us
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white p-6 rounded-lg shadow-md">
+        <div className="sm:grid grid-cols-1 md:grid-cols-2 gap-8 flex flex-col">
+          <div className="bg-white p-6 rounded-lg shadow-md ">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">
               Contact Information
             </h2>
@@ -18,11 +18,10 @@ function ContactUs() {
             <ul className="list-disc pl-5">
               <li className="mb-2">Email: simsunelectricwork@gmail.com</li>
               <li className="mb-2">Phone: +007 9089 6767</li>
-              <li className="mb-2">Address: Flat No. T-1, 104, 1st Floor, Tower-1
-No. GH 01/A, Sector 16C,
-Exotica Dreamville, Greater Noida,
-U.P. 201203
-</li>
+              <li className="mb-2">
+                Address: Flat No. T-1, 104, 1st Floor, Tower-1 No. GH 01/A,
+                Sector 16C, Exotica Dreamville, Greater Noida, U.P. 201203
+              </li>
             </ul>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md">

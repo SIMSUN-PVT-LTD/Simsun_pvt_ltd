@@ -26,6 +26,8 @@ import EngineerLogin from './Auth/EngineerLogin'
 import AdminLogin from './Auth/AdminLogin'
 import ContactUs from './components/ContactUs'
 import Cart from './components/Cart'
+import Maintenance from './CompanyPages/Services/Maintenance'
+import ElevatorModerinazation from './TemplatePages/ExistingsBuilding/ElevatorModerinazation'
 
 
 function App() {
@@ -49,6 +51,8 @@ function App() {
           <Route path='/services/NewInstallationServices' element={<NewInstallationServices/>}/>
           <Route path='/services/AnnualMaintainenceServices' element={<AnnualMaintainenceServices/>}/>
           <Route path='/services/BreakdownServices' element={<BreakdownServices/>}/>
+          <Route path='/services/Maintenance' element={<Maintenance/>}/>
+          <Route path='/services/ElevatorModerinazation' element={<ElevatorModerinazation/>}/>
         
           <Route path='/shop' element={<Shop/>}/>
 
