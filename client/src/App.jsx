@@ -70,6 +70,7 @@ function App() {
           <Route path='/auth/AdminLogin' element={<AdminLogin/>}/>
 
           <Route path='/ContactUs' element={<ContactUs/>}/>
+          <Route path='/Cart' element={<Cart/>}/>
 
 
           
