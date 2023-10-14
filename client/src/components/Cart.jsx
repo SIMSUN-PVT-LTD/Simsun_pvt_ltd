@@ -39,7 +39,7 @@ function Cart() {
         <div className="text-white h-full w-full xl:flex">
           <div className="text-white xl:w-[66%] p-4">
             <div className="flex justify-between items-center px-2">
-              <div className="text-yellow-500 text-xl">
+              <div className="text-black font-bold text-xl">
                 Item-{previousOrders.length}
               </div>
               {/* <div> Delete</div> */}
@@ -122,10 +122,13 @@ function Cart() {
             </div>
             <div className="flex justify-between items-center p-2">
               <button
-                className="bg-yellow-500 hover:bg-yellow-700 w-full text-white font-bold py-2 px-4 rounded"
+                className="bg-green-500 hover:bg-green-700 w-full text-white font-bold py-2 px-4 rounded"
                 onClick={() => handlePayment(subTotal, id, email)}
               >
-                Checkout
+                <span className="">
+
+                Make payment
+                </span>
               </button>
             </div>
             <div className="flex justify-between items-center p-2">

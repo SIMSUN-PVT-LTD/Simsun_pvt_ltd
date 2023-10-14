@@ -28,6 +28,7 @@ import ContactUs from './components/ContactUs'
 import Cart from './components/Cart'
 import Maintenance from './CompanyPages/Services/Maintenance'
 import ElevatorModerinazation from './TemplatePages/ExistingsBuilding/ElevatorModerinazation'
+import EscalatorAutowalkModernization from './CompanyPages/Services/EscalatorAutowalkModernization'
 
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
           <Route path='/services/BreakdownServices' element={<BreakdownServices/>}/>
           <Route path='/services/Maintenance' element={<Maintenance/>}/>
           <Route path='/services/ElevatorModerinazation' element={<ElevatorModerinazation/>}/>
+          {/* <Route path='/services/EscalatorAutowalkModernization' element={<EscalatorAutowalkModernization/>}/> */}
         
           <Route path='/shop' element={<Shop/>}/>
 

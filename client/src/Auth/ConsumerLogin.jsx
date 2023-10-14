@@ -7,8 +7,8 @@ const ConsumerLogin = () => {
   const navigate = useNavigate();
 
   const handleLogin = async () => {
-    // Add your login logic here
-    navigate("/dashboard"); // Redirect to the dashboard upon successful login
+      console.log(email+" "+password)
+    // navigate("/dashboard"); 
   };
 
   return (
@@ -58,6 +58,8 @@ const ConsumerLogin = () => {
                             id="input-group-1"
                             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             placeholder="xyz@gmail.com"
+                            value={email}
+                            onChange={(e) =>setEmail(e.target.value)}
                           />
                         </div>
                         <label
@@ -83,6 +85,8 @@ const ConsumerLogin = () => {
                             id="website-admin"
                             className="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             placeholder=""
+                            value={password}
+                            onChange={(e) =>setPassword(e.target.value)}
                           />
                         </div>
                       </div>
@@ -98,6 +102,7 @@ const ConsumerLogin = () => {
                             background:
                               "linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593)",
                           }}
+                          onClick={handleLogin}
                         >
                           Login
                         </button>
