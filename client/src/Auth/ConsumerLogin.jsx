@@ -1,15 +1,40 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const ConsumerLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = async () => {
-      console.log(email+" "+password)
-    // navigate("/dashboard"); 
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/consumerLogin",
+        {
+          email,
+          password,
+        }
+      );
+
+      if (response.status === 200) {
+        // Registration was successful
+        const json = response.data;
+        console.log(json);
+        navigate("/");
+      } else {
+        // Handle other status codes or errors here
+        console.error("Registration failed with status code:", response.status);
+      }
+    } catch (error) {
+      // Handle network or other errors
+      console.error("Registration failed:", error.message);
+    }
   };
+
+  
 
   return (
     <section className="gradient-form h-full ">

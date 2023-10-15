@@ -1,14 +1,37 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const EngineerLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = async () => {
-    // Add your login logic here
-    navigate("/dashboard"); // Redirect to the dashboard upon successful login
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    console.log("working")
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/engineerLogin",
+        {
+          email,
+          password,
+        }
+      );
+
+      if (response.status === 200) {
+        // Registration was successful
+        const json = response.data;
+        console.log(json);
+        navigate("/");
+      } else {
+        // Handle other status codes or errors here
+        console.error("Registration failed with status code:", response.status);
+      }
+    } catch (error) {
+      // Handle network or other errors
+      console.error("Registration failed:", error.message);
+    }
   };
 
   return (
@@ -37,6 +60,7 @@ const EngineerLogin = () => {
                         <label
                           htmlFor="input-group-1"
                           className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        
                         >
                           Your Email
                         </label>
@@ -58,6 +82,8 @@ const EngineerLogin = () => {
                             id="input-group-1"
                             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             placeholder="xyz@gmail.com"
+                            value={email}
+                            onChange={(e) =>setEmail(e.target.value)}
                           />
                         </div>
                         <label
@@ -83,6 +109,9 @@ const EngineerLogin = () => {
                             id="website-admin"
                             className="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             placeholder=""
+                            value={password}
+                            onChange={(e) =>setPassword(e.target.value)}
+
                           />
                         </div>
                       </div>
@@ -98,6 +127,7 @@ const EngineerLogin = () => {
                             background:
                               "linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593)",
                           }}
+                          onClick={handleLogin}
                         >
                           Login
                         </button>
@@ -112,8 +142,9 @@ const EngineerLogin = () => {
                           className="inline-block rounded border-2 border-danger px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-danger transition duration-150 ease-in-out hover:border-danger-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-danger-600 focus:border-danger-600 focus:text-danger-600 focus:outline-none focus:ring-0 active:border-danger-700 active:text-danger-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
                           data-te-ripple-init
                           data-te-ripple-color="light"
+                          
                         >
-                          Login
+                          Register
                         </button>
                       </div>
                     </form>
