@@ -25,14 +25,14 @@ export default function Header() {
 
   return (
     <header class=" top-0 w-full  z-50 bg-[#161D24] flex justify-around">
-      <div class=" w-full  p-2  flex flex-wrap  flex-col md:flex-row  md:justify-normal xl:justify-around  xl:bg-inherit    justify-around ">
+      <div class=" w-full  p-2  flex flex-wrap  flex-col sm:flex-row  sm:justify-normal sm:items-center   xl:bg-inherit    justify-around ">
         <div className="flex flex-row  items-center justify-between  md:p-1  ">
           <Link
             to="/"
-            class="flex text-3xl text-white border  justify-center items-center border-red-400 rounded-full overflow-hidden font-medium mb-4 md:mb-0 "
+            class="flex text-3xl text-white border md:translate-x-10  justify-center items-center border-red-400 rounded-full overflow-hidden font-medium mb-4 md:mb-0 "
           >
-          <div className=" rounded-full">
-          <img src={Logo} alt="" className="w-28" />
+          <div className=" rounded-full ">
+          <img src={Logo} alt="" className="sm:w-28 md:w-12 xl:w-28 w-28" />
 
           </div>
           </Link>
@@ -62,7 +62,7 @@ export default function Header() {
         </div>
         <div
           className={
-            "md:flex   items-center justify-center ml-5 flex-col   " +
+            "md:flex   items-center justify-center ml-5 flex-col w-full md:w-4/5 xl:w-[90%]   " +
             (navbarOpen ? " block  flex-col   p-5" : " hidden")
           }
         >

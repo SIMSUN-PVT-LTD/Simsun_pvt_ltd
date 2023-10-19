@@ -6,8 +6,13 @@ import lift4 from "../../assets/img/lift4.jpg";
 import lift5 from "../../assets/img/lift5.jpg";
 import lift7 from "../../assets/img/lift7.jpg";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Homepage = () => {
+  const state = useSelector(state => state.user);
+  console.log("from here")
+  console.log(state)
+
   return (
     <>
       <div className=" h-[28rem]  sm:h-[28rem] sm:flex">

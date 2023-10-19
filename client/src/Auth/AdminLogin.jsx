@@ -1,8 +1,11 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { logIn } from "../store/slices/UserSlice";
 const AdminLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const dispatch = useDispatch()
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,6 +22,7 @@ const AdminLogin = () => {
       if (response.status === 200) {
         // Registration was successful
         const json = response.data;
+        dispatch(logIn(json))
         console.log(json);
         navigate("/");
       } else {

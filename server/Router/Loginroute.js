@@ -33,7 +33,7 @@ router.post('/consumerLogin', async (req, res) => {
         }
 
         const authToken = jwt.sign(data, KEY);
-        return res.json({ success: true, authToken: authToken, name: userData.name });
+        return res.json({ success: true, authToken: authToken, userData: userData });
 
     } catch (err) {
         console.log(err);
@@ -66,7 +66,7 @@ router.post('/engineerLogin', async (req, res) => {
         }
 
         const authToken = jwt.sign(data, KEY);
-        return res.json({ success: true, authToken: authToken, name: userData.name });
+        return res.json({ success: true, authToken: authToken, userData: userData });
 
     } catch (err) {
         console.log(err);
@@ -100,7 +100,7 @@ router.post('/adminLogin', async (req, res) => {
         }
 
         const authToken = jwt.sign(data, KEY);
-        return res.json({ success: true, authToken: authToken, name: userData.name });
+        return res.json({ success: true, authToken: authToken, userData: userData });
 
     } catch (err) {
         console.log(err);

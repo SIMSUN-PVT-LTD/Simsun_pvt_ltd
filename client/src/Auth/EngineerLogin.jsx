@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { logIn } from "../store/slices/UserSlice";
 
 const EngineerLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const dispatch = useDispatch()
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -22,6 +25,7 @@ const EngineerLogin = () => {
       if (response.status === 200) {
         // Registration was successful
         const json = response.data;
+        dispatch(logIn(json))
         console.log(json);
         navigate("/");
       } else {
