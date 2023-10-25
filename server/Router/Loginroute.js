@@ -5,7 +5,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const ConsumerModel = require('../Models/ConsumerModel');
 const EngineerModel = require('../Models/EngineerModel');
-const AdminModel = require('../Models/AdminModel');
+const AdminModel = require('../Models/AdminModel'); 
 
 router.post('/consumerLogin', async (req, res) => {
     const KEY = process.env.KEY;

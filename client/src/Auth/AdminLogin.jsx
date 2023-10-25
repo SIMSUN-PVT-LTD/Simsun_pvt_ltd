@@ -2,10 +2,13 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { logIn } from "../store/slices/UserSlice";
+import { useNavigate } from "react-router-dom";
 const AdminLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch()
+
+  const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,13 +21,13 @@ const AdminLogin = () => {
           password,
         }
       );
-
-      if (response.status === 200) {
+        console.log(response.status)
+      if (response.status == 200) {
         // Registration was successful
         const json = response.data;
         dispatch(logIn(json))
         console.log(json);
-        navigate("/");
+        navigate("/addProduct");
       } else {
         // Handle other status codes or errors here
         console.error("Registration failed with status code:", response.status);

@@ -29,6 +29,7 @@ import Cart from './components/Cart'
 import Maintenance from './CompanyPages/Services/Maintenance'
 import ElevatorModerinazation from './TemplatePages/ExistingsBuilding/ElevatorModerinazation'
 import EscalatorAutowalkModernization from './CompanyPages/Services/EscalatorAutowalkModernization'
+import AddProduct from './CompanyPages/Product/AddProduct/AddProduct'
 
 
 function App() {
@@ -48,13 +49,14 @@ function App() {
           <Route path='/product/esclator' element={<Esclator/>}/>
           <Route path='/product/LiftSparePart' element={<LiftSparePart/>}/>
           <Route path='/product/EsclatorSparePart' element={<EsclatorSparePart/>}/>
+          <Route path='/addProduct' element={<AddProduct/>}/>
 
           <Route path='/services/NewInstallationServices' element={<NewInstallationServices/>}/>
           <Route path='/services/AnnualMaintainenceServices' element={<AnnualMaintainenceServices/>}/>
           <Route path='/services/BreakdownServices' element={<BreakdownServices/>}/>
           <Route path='/services/Maintenance' element={<Maintenance/>}/>
           <Route path='/services/ElevatorModerinazation' element={<ElevatorModerinazation/>}/>
-          {/* <Route path='/services/EscalatorAutowalkModernization' element={<EscalatorAutowalkModernization/>}/> */}
+          <Route path='/services/EscalatorAutowalkModernization' element={<EscalatorAutowalkModernization/>}/>
         
           <Route path='/shop' element={<Shop/>}/>
 

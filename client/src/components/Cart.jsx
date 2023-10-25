@@ -1,25 +1,41 @@
-import React from 'react';
+import React from "react";
+import imageurl from "../assets/img/lift2.jpg";
+import { useSelector } from "react-redux";
 
 function Cart() {
   // Static data for previous orders
+  const state = useSelector(state => state.cart)
+  console.log(state)
   const previousOrders = [
     {
       id: 1,
-      title: 'Course Title 1',
+      title: "Course Title 1",
       price: 49.99,
-      imageURL: 'https://example.com/course1.jpg',
+      imageURL: imageurl,
     },
     {
       id: 2,
-      title: 'Course Title 2',
+      title: "Course Title 2",
       price: 29.99,
-      imageURL: 'https://example.com/course2.jpg',
+      imageURL: imageurl,
     },
     {
       id: 3,
-      title: 'Course Title 3',
+      title: "Course Title 3",
       price: 39.99,
-      imageURL: 'https://example.com/course3.jpg',
+      imageURL: imageurl,
+    },
+    {
+      id: 3,
+      title: "Course Title 3",
+      price: 39.99,
+      imageURL: imageurl,
+    },
+    {
+      id: 3,
+      title: "Course Title 3",
+      price: 39.99,
+      imageURL: imageurl,
     },
   ];
 
@@ -30,105 +46,130 @@ function Cart() {
   // Static data for subTotal, id, and email
   const subTotal = 119.97;
   const id = 123;
-  const email = 'user@example.com';
+  const email = "user@example.com";
 
   return (
-    <div className="bg-gradient-to-b from-blue-200 to-blue-400  min-h-screen py-10">
+    <div className="bg-gradient-to-b from-blue-200 to-blue-400 min-h-screen py-10">
       <div className="container mx-auto px-4">
-        <h1 className="text-3xl font-semibold text-gray-800 mb-6">Shopping Cart</h1>
+        <h1 className="text-3xl font-bold text-gray-800 mb-6">Shopping Cart</h1>
         <div className="text-white h-full w-full xl:flex">
           <div className="text-white xl:w-[66%] p-4">
             <div className="flex justify-between items-center px-2">
               <div className="text-black font-bold text-xl">
-                Item-{previousOrders.length}
+                Items - {state?.length}
               </div>
-              {/* <div> Delete</div> */}
             </div>
-            {previousOrders.map((order) => (
-              <div key={order.id}>
-                <div className="text-white min-h-72 mb-4 xl:mb-0 xl:flex xl:h-[12rem] xl:mt-4 rounded-md bg-slate-800">
-                  <div className="flex justify-center items-center flex-col xl:w-[20%]">
+
+            <div className="md:grid grid-cols-3 gap-4 flex flex-col">
+              {state?.map((order) => (
+                <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                 
                     <img
-                      src={order.imageURL}
-                      alt="book cover"
-                      className="w-[6rem] h-[6rem] rounded-md"
+                      className="p-8 rounded-t-lg w-full"
+                      src={order?.imageUrl || imageurl}
+                      alt="product image"
                     />
-                    <h3>₹{order.price}</h3>
-                  </div>
-                  <div className="xl:w-[30%] flex justify-center items-center">
-                    {order.title}
-                  </div>
-                  <div className="xl:w-[5%] flex justify-center items-center">+</div>
-                  <div className="xl:w-[40%] p-2 rounded-md border border-white xl:h-3/5 xl:p-0 xl:mt-8">
-                    <div className="flex justify-around items-center xl:h-[45%]">
-                      <span>Why this?</span>
-                      <div>
-                        <input
-                          onClick={(e) => handleClick(e, order.id, order.title, order.price)}
-                          id={order.id}
-                          type="checkbox"
-                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 cursor-pointer"
-                        />
-                        <label htmlFor={order.id} className="ml-2 text-sm font-medium text-yellow-900 dark:text-yellow-300">Select</label>
-                      </div>
-                    </div>
-                    <div className="flex justify-around items-center xl:h-[45%]">
-                      ₹{order.price}
-                      <span
-                        className="text-red-500 cursor-pointer"
-                        onClick={() => handleDeleteOneItem(order.id)}
+                 
+                  <div className="px-5 pb-5">
+                    <a href="#">
+                      <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                        {order?.name}
+                      </h5>
+                    </a>
+                    <div className="flex items-center mt-2.5 mb-5">
+                      <svg
+                        className="w-4 h-4 text-yellow-300 mr-1"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 22 20"
                       >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          strokeWidth={1.5}
-                          stroke="currentColor"
-                          className="w-6 h-6"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
-                          />
-                        </svg>
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                      </svg>
+                      <svg
+                        className="w-4 h-4 text-yellow-300 mr-1"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 22 20"
+                      >
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                      </svg>
+                      <svg
+                        className="w-4 h-4 text-yellow-300 mr-1"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 22 20"
+                      >
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                      </svg>
+                      <svg
+                        className="w-4 h-4 text-yellow-300 mr-1"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 22 20"
+                      >
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                      </svg>
+                      <svg
+                        className="w-4 h-4 text-gray-200 dark:text-gray-600"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 22 20"
+                      >
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                      </svg>
+                      <span className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">
+                        5.0
                       </span>
+                    </div>
+                    <p>{order?.descp?.slice(0,40)}...</p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-3xl font-bold text-gray-900 dark:text-white">
+                      ₹{order?.price}
+                      </span>
+                      
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+
+            </div>
           </div>
 
           <div className="mb-12 text-white max-h-[25rem] rounded-md bg-slate-800 xl:w-[34%] p-5 xl:translate-x-14 xl:translate-y-8">
-            <div className="flex items-center p-2 text-2xl">
+            <div className="flex items-center p-2 text-2xl font-semibold">
               Bill Details
             </div>
             <div className="flex justify-between items-center p-2">
-              SubTotal
-              <span>₹{subTotal}</span>
+              Subtotal
+              <span className="text-yellow-700">₹{subTotal}</span>
             </div>
             <div className="flex justify-between items-center p-2">
               Total Discount
-              <span>-₹0</span>
+              <span className="text-red-500">-₹0</span>
             </div>
             <div className="flex justify-between items-center p-2">
               GST@18%
-              <span>₹{(0.18 * subTotal).toFixed(2)}</span>
+              <span className="text-green-500">
+                ₹{(0.18 * subTotal).toFixed(2)}
+              </span>
             </div>
             <div className="flex justify-between items-center p-2">
               Total Amount
-              <span>₹{subTotal + parseFloat((0.18 * subTotal).toFixed(2))}</span>
+              <span className="text-yellow-700">
+                ₹{subTotal + parseFloat((0.18 * subTotal).toFixed(2))}
+              </span>
             </div>
             <div className="flex justify-between items-center p-2">
               <button
-                className="bg-green-500 hover:bg-green-700 w-full text-white font-bold py-2 px-4 rounded"
+                className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full"
                 onClick={() => handlePayment(subTotal, id, email)}
               >
-                <span className="">
-
-                Make payment
-                </span>
+                Make Payment
               </button>
             </div>
             <div className="flex justify-between items-center p-2">
@@ -137,7 +178,7 @@ function Cart() {
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[58%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Coupon Code"
               />
-              <button class="bg-transparent hover:bg-blue-500 w-[40%] text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded hidden xl:block ">
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-semibold hover:text-white py-2 px-4 border border-blue-500 rounded hidden xl:block w-[40%]">
                 Apply
               </button>
             </div>
@@ -145,33 +186,31 @@ function Cart() {
         </div>
 
         <div className="text-white w-full text-2xl text-left mt-4">
-          Previous Order
+          Previous Orders
         </div>
         <div className="text-white w-full text-2xl text-left mt-2">
           <div className="container m-auto sm:grid grid-cols-3 gap-4 py-2 px-6 flex flex-col">
             {previousOrders.map((order) => (
-              <>
-                <div
-                  key={order.id}
-                  className="flex max-w-[18rem] rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-slate-700"
-                >
-                  <div className="relative overflow-hidden bg-cover bg-no-repeat">
-                    <img
-                      className="rounded-t-lg h-full"
-                      src={order.imageURL}
-                      alt=""
-                    />
-                  </div>
-                  <div className="p-6 flex flex-col flex-start items-center justify-around">
-                    <p className="text-base text-neutral-600 dark:text-neutral-200 flex justify-center items-center">
-                      {order.title}
-                    </p>
-                    <p className="text-base text-neutral-600 dark:text-neutral-200 flex justify-center items-center">
-                      ${order.price}
-                    </p>
-                  </div>
+              <div
+                key={order.id}
+                className="flex max-w-[18rem] rounded-lg bg-white shadow-md dark:bg-slate-700"
+              >
+                <div className="relative overflow-hidden bg-cover bg-no-repeat">
+                  <img
+                    className="rounded-t-lg h-full"
+                    src={order.imageURL}
+                    alt=""
+                  />
                 </div>
-              </>
+                <div className="p-6 flex flex-col flex-start items-center justify-around">
+                  <p className="text-base text-neutral-600 dark:text-neutral-200 text-center font-semibold">
+                    {order.title}
+                  </p>
+                  <p className="text-base text-neutral-600 dark:text-neutral-200 text-center font-semibold">
+                    ₹{order.price}
+                  </p>
+                </div>
+              </div>
             ))}
           </div>
         </div>

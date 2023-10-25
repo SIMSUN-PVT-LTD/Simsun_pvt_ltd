@@ -1,7 +1,23 @@
 import React from 'react'
 import lift from '../../assets/img/escalator1.jpg'
+import { useDispatch } from 'react-redux';
+import { addItem } from '../../store/slices/CartSlices';
+
+import useSWR,{ mutate } from 'swr'
+import axios from 'axios';
 
 const Shop = () => {
+  const fetcher = async (...args) => {
+    // console.log("Wroin")
+    const res = await axios.get(...args);
+    // console.log(res?.data?.result)
+    return res?.data?.result;
+  }
+
+  const dispatch = useDispatch()
+
+  const {data,error,isLoading} = useSWR('http://localhost:5000/api/allProduct',fetcher)
+  console.log(data)
     const products = [
         {
           name: 'Electric Lift Motor',
@@ -59,20 +75,22 @@ const Shop = () => {
           <div className="min-h-screen bg-gray-100 p-4">
       <h1 className="text-3xl font-semibold text-center mb-8">Shop</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        {products.map((product, index) => (
+        {data?.map((product) => (
           <div
-            key={index}
+            key={product?._id}
             className="bg-blue-100 hover:bg-blue-200 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300"
           >
-            {/* <img
-              src={lift}
-              alt={product.name}
+            <img
+              src={product.imageUrl}
+              alt={product.imageUrl }
               className="mx-auto mb-4 w-full h-32 object-contain"
-            /> */}
+            />
             <h2 className="text-xl font-semibold">{product.name}</h2>
-            <p className="text-gray-600 mb-2">{product.description}</p>
-            <p className="text-blue-500 font-semibold">{product.price}</p>
-            <button className="bg-blue-500 text-white hover:bg-blue-600 px-4 py-2 rounded mt-4">
+            <p className="text-gray-600 mb-2">{product.descp}</p>
+            <p className="text-blue-500 font-semibold">₹{product.price}</p>
+            <button className="bg-blue-500 text-white hover:bg-blue-600 px-4 py-2 rounded mt-4"
+            onClick={(e) => dispatch(addItem(product))}
+            >
               Add to Cart
             </button>
           </div>
