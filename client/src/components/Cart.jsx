@@ -44,7 +44,7 @@ function Cart() {
   };
 
   // Static data for subTotal, id, and email
-  const subTotal = 119.97;
+  const subTotal = state?.reduce((acc, item) => acc + item.price, 0);
   const id = 123;
   const email = "user@example.com";
 

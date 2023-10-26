@@ -69,5 +69,24 @@ router.post(
   }
 );
 
+router.get(
+  "/product/:name",
+  async (req, res) => {
+    const name = req.params.name;
+    // console.log(name);
+    try {
+      // console.log(name)
+      const product = await ProductModel.find({category:name}); 
+      if(product){
+        res.status(200).json({result:product})
+      } else {
+        res.status(201).json({message:"Error in retriving data"})
+      }
+    } catch (error) {
+      res.status(500).json("Error in getting data by server");
+    }
+  }
+);
+
 
 module.exports = router;

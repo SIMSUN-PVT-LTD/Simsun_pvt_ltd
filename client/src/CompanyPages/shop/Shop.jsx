@@ -8,9 +8,7 @@ import axios from 'axios';
 
 const Shop = () => {
   const fetcher = async (...args) => {
-    // console.log("Wroin")
     const res = await axios.get(...args);
-    // console.log(res?.data?.result)
     return res?.data?.result;
   }
 
